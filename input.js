@@ -26,6 +26,13 @@ const setupInput = function(conn) {
     if (key === 'd'){
       connection.write("Move: right");
     } 
+    if (key === '1'){
+      connection.write("Say: LHL Rules");
+    } 
+    if (key === '2'){
+      connection.write("Say: i <3 u");
+    } 
+
     if (key === '\u0003') {
       process.exit();
     }
