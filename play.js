@@ -12,12 +12,15 @@ const setupInput = function() {
   stdin.setEncoding('utf8');
   stdin.resume();
   
+
   const handleUserInput = (key)=> {
+     console.log("key; ",key)
+     
     if (key === '\u0003') {
       process.exit();
     }
   }
-  
+
   stdin.on('data', (data)=>handleUserInput(data));
 
   return stdin;
