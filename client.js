@@ -23,21 +23,17 @@ const connect = function() {
     conn.write("Name: KDT");
   });
 
-  conn.on('connect', () => {
-    conn.write("Move: up");
-  });
-  conn.on('connect', () => {
-    conn.write("Move: up");
-  });
-
-  conn.on('connect', ()=> {
-    setTimeout(()=> conn.write("Move: left"), 50)
-  })
-  conn.on('connect', ()=> {
-    let repeat = setInterval(()=> conn.write("Move: left"), 50);
+  // conn.on('connect', () => {
+  //   conn.write("Move: up");
+  // });
+  // conn.on('connect', ()=> {
+  //   setTimeout(()=> conn.write("Move: left"), 50)
+  // })
+  // conn.on('connect', ()=> {
+  //   let repeat = setInterval(()=> conn.write("Move: left"), 50);
     
-    setTimeout(()=> clearInterval(repeat) , 2000);
-  })
+  //   setTimeout(()=> clearInterval(repeat) , 2000);
+  // })
 
   conn.on('error', (error)=> console.log(error))
   
